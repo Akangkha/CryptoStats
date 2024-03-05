@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
         width={100}
         height={100}
       />
-      <div className="md:flex gap-4 items-center justify-center font-medium text-md hidden">
+      <div className="md:flex gap-4 cursor-pointer items-center justify-center font-medium text-md hidden">
         <div>Crypto Taxes</div>
         <div>Free Tools</div>
         <div>Resource Center</div>
@@ -26,23 +26,23 @@ const Navbar: React.FC = () => {
       </div>
       <MenuIcon className="w-10 h-10 md:hidden" onClick={openMenu} />
       <div
-        className={`top-0 right-0 w-[56vw] bg-blue-900  pb-10  text-white fixed h-full z-40 ease-in-out duration-300 ${
+        className={`top-0 right-0 w-[56vw] bg-blue-900 md:hidden pb-10   text-white fixed h-full z-40 ease-in-out duration-300 ${
           open ? "translate-x-0 " : "translate-x-full"
         }`}
       >
         <CloseIcon onClick={openMenu} className="m-5" />
         <div className="flex flex-col  justify-between font-medium text-md mt-32  w-full ">
-          <div className="hover:bg-blue-800  p-4 pr-10 pl-10 border border-t-0 border-l-0 border-gray-400">
+          <div className="hover:bg-blue-800  p-4 pr-10 pl-10 border border-t-0 border-l-0 border-r-0 border-gray-400">
             Crypto Taxes
           </div>
-          <div className="hover:bg-blue-800 p-4  pr-10 pl-10 border border-t-0 border-l-0 border-gray-400">
+          <div className="hover:bg-blue-800 p-4  pr-10 pl-10 border border-t-0 border-l-0  border-r-0 border-gray-400">
             Free Tools
           </div>
-          <div className="hover:bg-blue-800 p-4  mb-4 pr-10 pl-10 border border-t-0 border-l-0 border-gray-400">
+          <div className="hover:bg-blue-800 p-4  mb-4 pr-10 pl-10 border border-t-0 border-l-0  border-r-0 border-gray-400">
             Resource Center
           </div>
         </div>
-        <button className=" pt-2 pb-2 w- bg-primary absolute bottom-6 w-[80%] rounded-xl  text-white mr-10 ml-10">
+        <button className=" pt-2 pb-2 w- bg-primary absolute bottom-6 w-[80%] rounded-xl  text-white mr-[10%] ml-[10%] mb-4">
           Get Started
         </button>
       </div>
