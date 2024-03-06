@@ -5,6 +5,7 @@ import Trending from "@/components/Trending";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import Footer from "@/components/Footer";
 import Tokenomics from "@/components/Tokenomics";
+import Performance from "@/components/Performance";
 import About from "@/components/About";
 import Sentiment from "@/components/Sentiment";
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
             <span className="text-black font-medium p-0 m-0">Bitcoin</span>
           </div>
           {/* <TradingView />  */}
+          <Performance/>
           <Sentiment value1={76} value2={8} value3={16}/>
           <About title={title} information={information} />
           <Tokenomics />
@@ -32,7 +34,7 @@ export default function Home() {
           {/* <Trending /> */}
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
