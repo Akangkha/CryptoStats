@@ -15,23 +15,23 @@ export default function Home() {
   return (
     <>
       <div className="flex md:flex-row max-w-[120rem] gap-10 m-10 flex-col">
-        <div className="p-0 m-0  w-[95%] md:w-[60vw] flex flex-col gap-10">
+        <div className="p-0 m-0  w-[95%] md:w-[60vw] flex flex-col gap-2">
           <div>
             <span className="text-gray-700 p-0 m-0 ">
               Cryptocurrencies <KeyboardDoubleArrowRightIcon />
             </span>
             <span className="text-black font-medium p-0 m-0">Bitcoin</span>
           </div>
-          {/* <TradingView />  */}
-          <Performance/>
-          <Sentiment value1={76} value2={8} value3={16}/>
+          <TradingView /> 
+          <Performance />
+          <Sentiment value1={76} value2={8} value3={16} />
           <About title={title} information={information} />
           <Tokenomics />
           <Team />
         </div>
-        <div className="md:flex flex-col pt-20 gap-5 hidden">
+        <div className="flex flex-col m-auto mt-0 gap-10 ">
           <Subscription />
-          {/* <Trending /> */}
+          <Trending />
         </div>
       </div>
       {/* <Footer /> */}

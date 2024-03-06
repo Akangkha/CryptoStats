@@ -4,7 +4,7 @@ import Image from "next/image";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const Subscription = () => {
   return (
-    <div className="bg-primary rounded-3xl flex flex-col gap-8 items-center text-center text-white p-10 w-[24vw]">
+    <div className="bg-primary rounded-3xl flex flex-col gap-8 items-center text-center text-white p-10 md:w-[24vw] w-[95%] ">
       <div className="text-2xl font-bold ">
         Get Started with KoinX
         <br /> for FREE

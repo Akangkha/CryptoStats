@@ -4,7 +4,7 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 const Trending = () => {
   return (
-    <div className="bg-white p-6 shadow-md">
+    <div className="bg-white p-6 shadow-md rounded-lg w-[95%] md:w-full">
       <div className="text-xl font-bold">Trending Coins (24h)</div>
       <div className="flex items-center gap-3 mt-4">
         <Image
