@@ -9,7 +9,7 @@ const Tokenomics: React.FC = () => {
     const root = am5.Root.new("chartdiv");
     const chart = root.container.children.push(
       am5percent.PieChart.new(root, {
-        layout: root.verticalHorizontal,
+   
         radius: am5.percent(95),
         innerRadius: am5.percent(50),
       })
