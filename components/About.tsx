@@ -1,4 +1,5 @@
 import React from "react";
+import { CardImageContainer } from "./ui/aboutCard";
 
 interface AboutProps {
   title: string;
@@ -34,6 +35,22 @@ const About = ({ title, information }: AboutProps): JSX.Element => {
         pulvinar nunc risus. Fermentum potenti iaculis lacinia congue ipsum
         fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper
         dui
+      </div>
+      <div className="flex gap-10 flex-col md:flex-row">
+        <CardImageContainer
+          buttonText="Check Now"
+          buttonLink="/"
+          text="Calculate Your Profits"
+          image="/images/investment.png"
+          gradient="linear-gradient(135deg, #79F1A4 0%, #0E5CAD 100%)"
+        />
+        <CardImageContainer
+          buttonText="Check Now"
+          buttonLink="/"
+          text="Calculate Your Profits"
+          image="/assets/charts.png"
+          gradient="linear-gradient(135.73deg, #FF9865 0%, #EF3031 110.55%)"
+        />
       </div>
     </div>
   );
