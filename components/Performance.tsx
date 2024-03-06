@@ -50,7 +50,7 @@ const Performance = () => {
           height={25}
         />
       </div>
-      <div className="grid grid-cols-2 gap-10 text-base">
+      <div className="flex flex-col md:grid md:grid-cols-2 md:gap-10 gap-4 text-base">
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
           <div className="text-gray-600">Bitcoin Price</div>
           <div className="font-bold">$16,815.46</div>

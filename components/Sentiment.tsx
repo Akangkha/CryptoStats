@@ -16,8 +16,9 @@ const Sentiment: FC<SentimentProps> = ({ value1, value2, value3 }) => {
           height={25}
         />
       </div>
-      <div className="flex justify-around gap-6 w-full overflow-x-scroll text-sm">
-        <div className="flex gap-5 w-full bg-[#E8F4FD] p-6 rounded-xl max-w-[700px]">
+      <div className="flex ">
+      <div className="flex gap-6 w-full   overflow-x-scroll text-sm">
+        <div className="flex gap-5 w-full bg-[#E8F4FD] p-6 rounded-xl min-w-[500px] max-w-[700px]">
           <div className="w-[40%] ">
             <Image
               src="/icons/sentiment1.png"
@@ -38,7 +39,7 @@ const Sentiment: FC<SentimentProps> = ({ value1, value2, value3 }) => {
           </div>
         </div>
 
-        <div className="flex gap-5 w-full bg-[#EBF9F4] p-6 rounded-xl max-w-[700px]">
+        <div className="flex gap-5 w-full bg-[#EBF9F4] p-6 rounded-xl min-w-[600px] max-w-[700px]">
           <div className="w-[40%]">
             <Image
               src="/icons/sentiment2.png"
@@ -58,11 +59,12 @@ const Sentiment: FC<SentimentProps> = ({ value1, value2, value3 }) => {
             sit nisi viverra natoque lacinia libero enim.{" "}
           </div>
         </div>
-        <div className="w-4 h-4 p-6 relative  bg-white rounded-full z-10 m-auto shadow-xl border flex items-center justify-center ">
+        
+      </div>
+      <div className="w-4 h-4 p-6 relative right-0 bg-white rounded-full z-10 m-auto shadow-xl border flex items-center justify-center ">
           <ArrowForwardIosIcon />
         </div>
       </div>
-
       <div className="font-bold text-lg flex items-center gap-2">
         Analyst Estimates
         <Image
