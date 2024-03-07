@@ -1,3 +1,7 @@
+interface CurrencyValues {
+  [currency: string]: number;
+}
+
 export interface Coin {
   item: {
     id: string;
@@ -12,7 +16,7 @@ export interface Coin {
     data: {
       sparkline: string;
       price: string;
-      price_change_percentage_24h: { bits: number };
+      price_change_percentage_24h: any;
     };
   };
 }
