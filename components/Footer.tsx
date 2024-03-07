@@ -25,6 +25,19 @@ const Footer: React.FC = () => {
       slider.scrollLeft = slider.scrollLeft + 235;
     }
   };
+  const slideLeft1 = () => {
+    let slider1 = document.getElementById("slider1");
+    if (slider1) {
+      slider1.scrollLeft = slider1.scrollLeft - 235;
+    }
+  };
+
+  const slideRight1 = () => {
+    let slider1 = document.getElementById("slider1");
+    if (slider1) {
+      slider1.scrollLeft = slider1.scrollLeft + 235;
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +51,7 @@ const Footer: React.FC = () => {
 
     fetchData();
   }, []);
-
+  console.log(coins);
   return (
     <div className=" bg-gray-100">
       <div className="container mx-auto px-4 py-16 ">
@@ -48,7 +61,11 @@ const Footer: React.FC = () => {
             <AiOutlineArrowLeft onClick={slideLeft} />
           </button>
           <div
-            className="row-container flex overflow-x-hidden overflow-y-hidden whitespace-nowrap pb-4"
+            className="row-container flex overflow-x-hidden overflow-y-hidden whitespace-nowrap pb-4  "
+            style={{
+              transition: "transform 0.5s ease",
+              scrollBehavior: "smooth",
+            }}
             id="slider"
           >
             {coins.map((coin, index) => (
@@ -64,12 +81,17 @@ const Footer: React.FC = () => {
                     height={20}
                   />
                   <h2>{coin.item.symbol}</h2>
-                  {/* <Change /> */}
+                  <Change
+                    value={parseFloat(
+                      coin.item.data.price_change_percentage_24h?.usd || 0
+                    ).toFixed(2)}
+                  />
                 </div>
                 <div className="font-bold">{coin.item.data.price}</div>
+
                 <Image
                   src={coin.item.data.sparkline}
-                  alt="graph"
+                  alt="graph not visible due to security restrictions in coingecko"
                   width={200}
                   height={200}
                 />
@@ -84,11 +106,15 @@ const Footer: React.FC = () => {
 
         <div className="title-btns flex justify-between">
           <button className=" px-4 py-2 rounded-md">
-            <AiOutlineArrowLeft onClick={slideLeft} />
+            <AiOutlineArrowLeft onClick={slideLeft1} />
           </button>
           <div
             className="row-container flex overflow-x-hidden overflow-y-hidden whitespace-nowrap pb-4"
-            id="slider"
+            id="slider1"
+            style={{
+              transition: "transform 0.5s ease",
+              scrollBehavior: "smooth",
+            }}
           >
             {coins.map((coin, index) => (
               <div
@@ -103,12 +129,17 @@ const Footer: React.FC = () => {
                     height={20}
                   />
                   <h2>{coin.item.symbol}</h2>
-                  {/* <Change /> */}
+                  <Change
+                    value={parseFloat(
+                      coin.item.data.price_change_percentage_24h?.usd || 0
+                    ).toFixed(2)}
+                  />
                 </div>
                 <div className="font-bold">{coin.item.data.price}</div>
+
                 <Image
                   src={coin.item.data.sparkline}
-                  alt="graph"
+                  alt="graph not visible due to security restrictions in coingecko"
                   width={200}
                   height={200}
                 />
@@ -117,7 +148,7 @@ const Footer: React.FC = () => {
           </div>
 
           <button className=" px-4 py-2 rounded-md">
-            <AiOutlineArrowRight onClick={slideRight} />
+            <AiOutlineArrowRight onClick={slideRight1} />
           </button>
         </div>
       </div>
