@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Change from "./ui/Change";
+import Change from "../ui/Change";
 import { Coin } from "@/app/types/Coin";
 import { fetchTrendingCoins } from "@/app/api/trending";
 

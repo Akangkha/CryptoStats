@@ -1,5 +1,5 @@
 import { fetchBitcoinData } from "@/app/api/informatics";
-import TradingView from "@/components/ui/GraphStats";
+import TradingView from "@/ui/GraphStats";
 import Team from "@/components/Team";
 import Subscription from "@/components/Subscription";
 import Trending from "@/components/Trending";
@@ -28,7 +28,7 @@ export default async function Home() {
             </span>
             <span className="text-black font-medium p-0 m-0">Bitcoin</span>
           </div>
-          <TradingView /> 
+          <TradingView />
           {data && (
             <>
               <Performance

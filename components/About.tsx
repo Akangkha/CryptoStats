@@ -1,5 +1,5 @@
 import React from "react";
-import { CardImageContainer } from "./ui/aboutCard";
+import { CardImageContainer } from "../ui/aboutCard";
 
 interface AboutProps {
   title: string;
