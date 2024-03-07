@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
     setOpen(!open);
   };
   return (
-    <div className="w-full flex justify-between pr-8 pl-8 shadow-lg items-center">
+    <div className="w-full text-sm flex justify-between pr-8 pl-8 shadow-lg items-center">
       <Image
         src="/images/companylogo.svg"
         alt="company_Logo"

@@ -9,12 +9,12 @@ const Trending = async () => {
   const top3 = data.slice(0, 3);
 
   return (
-    <div className="bg-white p-6 shadow-lg rounded-lg w-[95%] md:w-full ">
+    <div className="bg-white p-6 shadow-lg rounded-lg w-[95%] md:w-[24vw] md:  ">
       <div className="text-xl font-bold">Trending Coins (24h)</div>
       {top3 &&
         top3.map((coin: Coin, index: number) => (
           <div
-            className="flex items-center justify-between gap-3 mt-4"
+            className="flex items-center justify-between gap-3 mt-4 text-sm"
             key={index}
           >
             <div className="flex gap-4">

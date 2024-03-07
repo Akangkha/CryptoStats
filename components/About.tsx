@@ -11,9 +11,10 @@ const About = ({ title, information }: AboutProps): JSX.Element => {
     <div className="p-8 rounded-xl flex flex-col gap-4 bg-white">
       <div className="font-bold text-2xl">{title}</div>
       <div className="font-bold text-xl">What is {title} ?</div>
-      <div className="md:border-b border-gray-300 pb-5">{information}</div>
+      <div className="md:border-b border-gray-300 pb-5 text-sm text-wrap overflow-hidden">{information}</div>
+
       <div className="font-bold text-xl">Lorem ipsum dolor sit amet</div>
-      <div className="md:border-b border-gray-300 pb-5">
+      <div className="md:border-b border-gray-300 pb-5 text-sm text-wrap">
         Lorem ipsum dolor sit amet consectetur. Aliquam placerat sit lobortis
         tristique pharetra. Diam id et lectus urna et tellus aliquam dictum at.
         Viverra diam suspendisse enim facilisi diam ut sed. Quam scelerisque

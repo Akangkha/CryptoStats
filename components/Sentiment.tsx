@@ -5,7 +5,7 @@ import { LinearProgress } from "@mui/material";
 import { SentimentProps } from "@/app/types/Sentiment";
 const Sentiment: FC<SentimentProps> = ({ value1, value2, value3 }) => {
   return (
-    <div className="p-8 rounded-xl flex flex-col gap-4 bg-white">
+    <div className="p-8 text-sm rounded-xl flex flex-col gap-4 bg-white">
       <div className="font-bold text-2xl">Sentiment</div>
       <div className="font-bold text-lg flex items-center gap-2">
         Key Events

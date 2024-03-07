@@ -80,17 +80,21 @@ export default async function Home() {
               />
               <Sentiment value1={76} value2={8} value3={16} />
               <About title={data?.name} information={data?.description.en} />
-              <Tokenomics />{" "}
             </>
-          )}{" "}
+          )}
+          <Tokenomics />
           <Team />
         </div>
-        <div className="flex flex-col m-auto mt-0 gap-10 ">
+        <div className="md:flex flex-col items-center h-fit justify-center md:w-[40vw] p-auto mt-0 gap-10 hidden">
           <Subscription />
           <Trending />
         </div>
       </div>
       <Footer />
+      <div className="md:hidden flex-col m-10  gap-10 flex w-[95%] ">
+          <Subscription />
+          <Trending />
+        </div>
     </>
   );
 }

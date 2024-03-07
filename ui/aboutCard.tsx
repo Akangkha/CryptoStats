@@ -12,21 +12,21 @@ export function CardImageContainer({
   }: CardImageContainerProps) {
     return (
       <div
-        className="p-3 rounded-lg flex items-start gap-5"
+        className="p-6 rounded-lg flex items-start gap-5"
         style={{ backgroundImage: gradient }}
       >
         <Image
           src={image}
           alt={text}
-          width={200}
-          height={200}
+          width={150}
+          height={150}
           className="rounded-lg object-cover w-40 h-40"
         />
         <div>
           <span className="text-white text-2xl font-semibold my-5">{text}</span>
           <Link
             href={buttonLink}
-            className="rounded-lg text-black bg-white flex items-center p-3 gap-4 font-semibold w-fit my-5"
+            className="rounded-lg text-black bg-white flex items-center p-4 gap-2 font-semibold text-sm w-fit my-5"
           >
             {buttonText}
             <svg

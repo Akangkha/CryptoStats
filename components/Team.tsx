@@ -5,7 +5,7 @@ function Team() {
   return (
     <div className=" p-8 rounded-xl flex flex-col gap-5 bg-white">
       <div className="font-bold text-2xl">Team</div>
-      <div className="mb-5">
+      <div className="mb-5 text-sm">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quae
         quaerat nisi itaque vel saepe sunt temporibus tenetur natus ipsa minus,
         maxime provident sed ad officia laboriosam! Quas, a aliquid.

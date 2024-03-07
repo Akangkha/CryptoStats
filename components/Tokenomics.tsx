@@ -5,7 +5,7 @@ import * as am5percent from "@amcharts/amcharts5/percent";
 
 const Tokenomics: React.FC = () => {
   useEffect(() => {
-    // Create chart instance
+   
     const root = am5.Root.new("chartdiv");
     const chart = root.container.children.push(
       am5percent.PieChart.new(root, {
@@ -15,7 +15,7 @@ const Tokenomics: React.FC = () => {
       })
     );
 
-    // Define data
+  
     const data = [
       {
         distribution: "Crowdsale investor",
@@ -54,7 +54,7 @@ const Tokenomics: React.FC = () => {
         <div className="flex gap-3 items-center"><div className="w-4 h-4 rounded-full bg-[#FAA002]"></div> Foundation</div>
       </div>
       </div>
-      <div>
+      <div className="text-sm">
         Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
         vestibulum nunc dignissim vel consequat. Leo etiam nascetur bibendum
         amet enim sit eget leo amet. At metus orci augue fusce eleifend lectus

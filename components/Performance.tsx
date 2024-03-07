@@ -1,4 +1,3 @@
-
 // http://localhost:3000/?token=bitcoin&currency=usd
 import React from "react";
 
@@ -21,14 +20,17 @@ const Performance = ({
   cap_dominance,
   ath,
   atl,
+  atl_change_percentage,
+  atl_date,
+  ath_change_percentage,
+  ath_date,
 }: PerformanceProps) => {
-
   return (
     <div className="p-8 rounded-xl flex flex-col gap-4 bg-white">
       <div className="font-bold text-2xl">Performance</div>
-      <div className="flex gap-10 justify-around items-center">
+      <div className="flex gap-10 text-sm justify-around items-center">
         <div className="flex flex-col justify-center items-center">
-          <div className="font-md text-gray-600">Today's low</div>
+          <div className=" text-gray-600">Today's low</div>
           <div className="font-semibold">46,930.22</div>
         </div>
         <div>
@@ -59,7 +61,7 @@ const Performance = ({
           />
         </div>
         <div className="flex flex-col justify-center items-center">
-          <div className="font-md text-gray-600">52W High</div>
+          <div className=" text-gray-600">52W High</div>
           <div className="font-semibold">49,743.83</div>
         </div>
       </div>
@@ -72,7 +74,7 @@ const Performance = ({
           height={25}
         />
       </div>
-      <div className="flex flex-col md:grid md:grid-cols-2 md:gap-10 gap-4 text-base">
+      <div className="flex text-sm flex-col md:grid md:grid-cols-2 md:gap-5 gap-4 ">
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
           <div className="text-gray-600">{name} Price</div>
           <div className="font-bold">{price}</div>
@@ -109,7 +111,12 @@ const Performance = ({
 
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
           <div className="text-gray-600">All-Time High</div>
-          <div className="font-bold">{ath}</div>
+          <div className="flex flex-col ">
+          <div className="font-bold flex gap-4">
+            {ath} <div className="text-[#F7324C]">{ath_change_percentage}%</div>
+          </div>
+          <div className="text-gray-500">{ath_date}</div>
+          </div>
         </div>
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
           <div className="text-gray-600">Market Cap Rank</div>
@@ -118,7 +125,12 @@ const Performance = ({
 
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
           <div className="text-gray-600">All-Time Low</div>
-          <div className="font-bold">{atl}</div>
+          <div className="flex flex-col ">
+          <div className="font-bold flex gap-4">
+            {atl} <div className="text-[#0FBA83]">{atl_change_percentage}%</div>
+          </div>
+          <div className="text-gray-500">{atl_date}</div>
+          </div>
         </div>
       </div>
     </div>

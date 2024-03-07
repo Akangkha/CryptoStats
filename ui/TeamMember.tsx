@@ -22,7 +22,7 @@ function TeamMember({ name, image, designation,children }: Readonly<{ children: 
         <div className="font-bold">{name}</div>
         <div className="font-sm">{designation}</div>
       </div>
-      <div style={{ width: "70%" }}>
+      <div style={{ width: "70%" }} className="text-sm">
         {children}
       </div>
     </div>
