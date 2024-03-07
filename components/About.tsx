@@ -11,9 +11,9 @@ const About = ({ title, information }: AboutProps): JSX.Element => {
     <div className="p-8 rounded-xl flex flex-col gap-4 bg-white">
       <div className="font-bold text-2xl">{title}</div>
       <div className="font-bold text-xl">What is {title} ?</div>
-      <div>{information}</div>
+      <div className="md:border-b border-gray-300 pb-5">{information}</div>
       <div className="font-bold text-xl">Lorem ipsum dolor sit amet</div>
-      <div>
+      <div className="md:border-b border-gray-300 pb-5">
         Lorem ipsum dolor sit amet consectetur. Aliquam placerat sit lobortis
         tristique pharetra. Diam id et lectus urna et tellus aliquam dictum at.
         Viverra diam suspendisse enim facilisi diam ut sed. Quam scelerisque
@@ -36,7 +36,10 @@ const About = ({ title, information }: AboutProps): JSX.Element => {
         fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper
         dui
       </div>
+      <div className="font-bold text-xl">Already Holding {title} ?</div>
       <div className="flex gap-10 flex-col md:flex-row">
+      
+      
         <CardImageContainer
           buttonText="Check Now"
           buttonLink="/"
@@ -48,7 +51,7 @@ const About = ({ title, information }: AboutProps): JSX.Element => {
           buttonText="Check Now"
           buttonLink="/"
           text="Calculate Your Profits"
-          image="/assets/charts.png"
+          image="/images/tax.png"
           gradient="linear-gradient(135.73deg, #FF9865 0%, #EF3031 110.55%)"
         />
       </div>

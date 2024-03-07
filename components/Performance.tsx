@@ -1,6 +1,28 @@
+
+// http://localhost:3000/?token=bitcoin&currency=usd
 import React from "react";
+
+import { PerformanceProps } from "@/app/types/PerformanceProps";
 import Image from "next/image";
-const Performance = () => {
+import { fetchcryptoinfo } from "@/app/api/informatics";
+
+const Performance = ({
+  name,
+  low24,
+  high24,
+  low54,
+  high54,
+  price,
+  low7,
+  high7,
+  vol,
+  rank,
+  cap,
+  cap_dominance,
+  ath,
+  atl,
+}: PerformanceProps) => {
+
   return (
     <div className="p-8 rounded-xl flex flex-col gap-4 bg-white">
       <div className="font-bold text-2xl">Performance</div>
@@ -52,44 +74,51 @@ const Performance = () => {
       </div>
       <div className="flex flex-col md:grid md:grid-cols-2 md:gap-10 gap-4 text-base">
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
-          <div className="text-gray-600">Bitcoin Price</div>
-          <div className="font-bold">$16,815.46</div>
-        </div>
-        <div className="flex gap-2 items-center justify-between border-b pb-4 ">
-          <div className="text-gray-600">24h Low / 24h High</div>
-          <div className="font-bold">$16,382.07 / $16,874.12</div>
-        </div>
-        <div className="flex gap-2 items-center justify-between border-b pb-4 ">
-          <div className="text-gray-600">7d Low / 7d High</div>
-          <div className="font-bold">$16,382.07 / $16,874.12</div>
-        </div>
-        <div className="flex gap-2 items-center justify-between border-b pb-4 ">
-          <div className="text-gray-600">Trading Volume</div>
-          <div className="font-bold">$23,249,202,782</div>
-        </div>
-        <div className="flex gap-2 items-center justify-between border-b pb-4 ">
-          <div className="text-gray-600">Market Cap Rank</div>
-          <div className="font-bold">#1</div>
+          <div className="text-gray-600">{name} Price</div>
+          <div className="font-bold">{price}</div>
         </div>
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
           <div className="text-gray-600">Market Cap</div>
-          <div className="font-bold">$323,507,290,047</div>
+          <div className="font-bold">{cap}</div>
         </div>
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
+          <div className="text-gray-600">24h Low / 24h High</div>
+          <div className="font-bold">
+            {atl} / {ath}
+          </div>
+        </div>
+
+        <div className="flex gap-2 items-center justify-between border-b pb-4 ">
           <div className="text-gray-600">Market Cap Dominance</div>
-          <div className="font-bold">38.343%</div>
+          <div className="font-bold">{cap_dominance}%</div>
+        </div>
+        <div className="flex gap-2 items-center justify-between border-b pb-4 ">
+          <div className="text-gray-600">7d Low / 7d High</div>
+          <div className="font-bold">
+            {low7} / {high7}
+          </div>
         </div>
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
           <div className="text-gray-600">Volume / Market Cap</div>
-          <div className="font-bold">0.0718</div>
+          <div className="font-bold">{vol / cap}</div>
         </div>
+        <div className="flex gap-2 items-center justify-between border-b pb-4 ">
+          <div className="text-gray-600">Trading Volume</div>
+          <div className="font-bold">{vol}</div>
+        </div>
+
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
           <div className="text-gray-600">All-Time High</div>
-          <div className="font-bold">$16,815.46</div>
+          <div className="font-bold">{ath}</div>
         </div>
         <div className="flex gap-2 items-center justify-between border-b pb-4 ">
+          <div className="text-gray-600">Market Cap Rank</div>
+          <div className="font-bold">#{rank}</div>
+        </div>
+
+        <div className="flex gap-2 items-center justify-between border-b pb-4 ">
           <div className="text-gray-600">All-Time Low</div>
-          <div className="font-bold">$16,815.46</div>
+          <div className="font-bold">{atl}</div>
         </div>
       </div>
     </div>
