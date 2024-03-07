@@ -26,7 +26,7 @@ const Performance = ({
   return (
     <div className="p-8 rounded-xl flex flex-col gap-4 bg-white">
       <div className="font-bold text-2xl">Performance</div>
-      <div className="flex gap-10 items-center">
+      <div className="flex gap-10 justify-around items-center">
         <div className="flex flex-col justify-center items-center">
           <div className="font-md text-gray-600">Today's low</div>
           <div className="font-semibold">46,930.22</div>

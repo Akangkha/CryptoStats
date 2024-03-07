@@ -9,7 +9,7 @@ const Trending = async () => {
   const top3 = data.slice(0, 3);
 
   return (
-    <div className="bg-white p-6 shadow-md rounded-lg w-[95%] md:w-full">
+    <div className="bg-white p-6 shadow-lg rounded-lg w-[95%] md:w-full ">
       <div className="text-xl font-bold">Trending Coins (24h)</div>
       {top3 &&
         top3.map((coin: Coin, index: number) => (

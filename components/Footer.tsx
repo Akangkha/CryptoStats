@@ -53,9 +53,9 @@ const Footer: React.FC = () => {
   }, []);
   console.log(coins);
   return (
-    <div className=" bg-gray-100">
+    <div className=" bg-gray-100 w-screen">
       <div className="container mx-auto px-4 py-16 ">
-        <h3 className="text-4xl font-bold mb-4">Trending</h3>
+        <h3 className="text-2xl font-bold mb-4">Trending</h3>
         <div className="title-btns flex justify-between">
           <button className=" px-4 py-2 rounded-md">
             <AiOutlineArrowLeft onClick={slideLeft} />
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
             <AiOutlineArrowRight onClick={slideRight} />
           </button>
         </div>
-
+        <h3 className="text-2xl font-bold mb-4">Trending Coins</h3>
         <div className="title-btns flex justify-between">
           <button className=" px-4 py-2 rounded-md">
             <AiOutlineArrowLeft onClick={slideLeft1} />

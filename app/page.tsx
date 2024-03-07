@@ -28,8 +28,8 @@ export default async function Home() {
             </span>
             <span className="text-black font-medium p-0 m-0">Bitcoin</span>
           </div>
-          {/* <TradingView />  */}
-          {/* {data && (
+          <TradingView /> 
+          {data && (
             <>
               <Performance
                 name={data?.name}
@@ -82,7 +82,7 @@ export default async function Home() {
               <About title={data?.name} information={data?.description.en} />
               <Tokenomics />{" "}
             </>
-          )}{" "} */}
+          )}{" "}
           <Team />
         </div>
         <div className="flex flex-col m-auto mt-0 gap-10 ">
